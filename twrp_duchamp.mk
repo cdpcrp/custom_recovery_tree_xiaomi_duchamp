@@ -11,6 +11,9 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit from duchamp device
 $(call inherit-product, device/xiaomi/duchamp/device.mk)
 
+# Virtual A/B OTA
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
+
 PRODUCT_DEVICE := duchamp
 PRODUCT_NAME := twrp_duchamp
 PRODUCT_BRAND := POCO
