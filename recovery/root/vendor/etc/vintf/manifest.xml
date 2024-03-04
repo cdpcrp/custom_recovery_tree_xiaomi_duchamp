@@ -24,7 +24,7 @@
         device/mediatek/vendor/common/manifest_target_level.xml
         device/mediatek/vendor/common/manifest.xml
 -->
-<manifest version="7.0" type="device" target-level="8">
+<manifest version="4.0" type="device" target-level="8">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
