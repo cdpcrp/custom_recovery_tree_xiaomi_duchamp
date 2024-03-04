@@ -1,0 +1,99 @@
+# Copyright (c) 2018-2019 The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted (subject to the limitations in the
+# disclaimer below) provided that the following conditions are met:
+#
+#    * Redistributions of source code must retain the above copyright
+#      notice, this list of conditions and the following disclaimer.
+#
+#    * Redistributions in binary form must reproduce the above
+#      copyright notice, this list of conditions and the following
+#      disclaimer in the documentation and/or other materials provided
+#      with the distribution.
+#
+#    * Neither the name of The Linux Foundation nor the names of its
+#      contributors may be used to endorse or promote products derived
+#      from this software without specific prior written permission.
+#
+# NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+# GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+# HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+# IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# Mount Point             FSType   Device1                Device2                  Flags
+
+# Boot
+/boot           emmc    /dev/block/by-name/boot
+/dtbo           emmc    /dev/block/by-name/dtbo
+/init_boot      emmc    /dev/block/by-name/init_boot
+/vendor_boot    emmc    /dev/block/by-name/vendor_boot
+
+# Security
+/persist        ext4    /dev/block/by-name/persist
+/persistent     emmc    /dev/block/by-name/frp
+/nvcfg          ext4    /dev/block/by-name/nvcfg
+/nvdata         ext4    /dev/block/by-name/nvdata
+/nvram          emmc    /dev/block/by-name/nvram
+/protect_f      ext4    /dev/block/by-name/protect1
+/protect_s      ext4    /dev/block/by-name/protect2
+
+# VBMeta
+/vbmeta         emmc    /dev/block/by-name/vbmeta
+/vbmeta_system  emmc    /dev/block/by-name/vbmeta_system
+/vbmeta_vendor  emmc    /dev/block/by-name/vbmeta_vendor
+
+# Other (most of them are MTK-specific)
+/apusys1        emmc    /dev/block/by-name/apusys1
+/apusys2        emmc    /dev/block/by-name/apusys2
+/audio_dsp      emmc    /dev/block/by-name/audio_dsp
+/boot_para      emmc    /dev/block/by-name/boot_para
+/bootloader2    emmc    /dev/block/by-name/bootloader2
+/cache          ext4    /dev/block/by-name/rescue
+/ccu            emmc    /dev/block/by-name/ccu
+/connsys_bt     emmc    /dev/block/by-name/connsys_bt
+/connsys_wifi   emmc    /dev/block/by-name/connsys_wifi
+/dpm1           emmc    /dev/block/by-name/dpm1
+/dpm2           emmc    /dev/block/by-name/dpm2
+/expdb          emmc    /dev/block/by-name/expdb
+/gpueb          emmc    /dev/block/by-name/gpueb
+/gz1            emmc    /dev/block/by-name/gz1
+/gz2            emmc    /dev/block/by-name/gz2
+/lk1            emmc    /dev/block/by-name/lk1
+/logo           emmc    /dev/block/by-name/logo
+/mcf_ota        emmc    /dev/block/by-name/mcf_ota
+/mcupm1         emmc    /dev/block/by-name/mcupm1
+/mcupm2         emmc    /dev/block/by-name/mcupm2
+/md1arm7        emmc    /dev/block/by-name/md1arm7
+/md1dsp         emmc    /dev/block/by-name/md1dsp
+/md1img         emmc    /dev/block/by-name/md1img
+/md3img         emmc    /dev/block/by-name/md3img
+/mvpu_algo1     emmc    /dev/block/by-name/mvpu_algo1
+/mvpu_algo2     emmc    /dev/block/by-name/mvpu_algo2
+/odmdtbo        emmc    /dev/block/by-name/odmdtbo
+/otp            emmc    /dev/block/by-name/otp
+/para           emmc    /dev/block/by-name/para
+/pi_img         emmc    /dev/block/by-name/pi_img
+/proinfo        emmc    /dev/block/by-name/proinfo
+/scp1           emmc    /dev/block/by-name/scp1
+/scp2           emmc    /dev/block/by-name/scp2
+/seccfg         emmc    /dev/block/by-name/seccfg
+/spmfw          emmc    /dev/block/by-name/spmfw
+/sspm1          emmc    /dev/block/by-name/sspm1
+/sspm2          emmc    /dev/block/by-name/sspm2
+/tee1           emmc    /dev/block/by-name/tee1
+/tee2           emmc    /dev/block/by-name/tee2
+/vcp            emmc    /dev/block/by-name/vcp
