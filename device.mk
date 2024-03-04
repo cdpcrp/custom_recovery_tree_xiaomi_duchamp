@@ -15,6 +15,9 @@ PRODUCT_PACKAGES += \
 
 AB_OTA_PARTITIONS += system boot vbmeta_system odm_dlkm product vbmeta_vendor vendor_dlkm system_ext vendor_boot vendor
 
+# API
+PRODUCT_SHIPPING_API_LEVEL := 32
+
 # Boot Control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
@@ -43,6 +46,9 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 34
 
 # Update Engine
 PRODUCT_PACKAGES += \
