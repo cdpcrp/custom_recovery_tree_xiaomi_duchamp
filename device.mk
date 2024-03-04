@@ -19,6 +19,9 @@ AB_OTA_PARTITIONS += system boot vbmeta_system odm_dlkm product vbmeta_vendor ve
 PRODUCT_PACKAGES += \
     bootctrl.mt6789
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Update Engine
 PRODUCT_PACKAGES += \
     update_engine \
