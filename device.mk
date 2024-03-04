@@ -15,9 +15,12 @@ PRODUCT_PACKAGES += \
 
 AB_OTA_PARTITIONS += system boot vbmeta_system odm_dlkm product vbmeta_vendor vendor_dlkm system_ext vendor_boot vendor
 
-# Boot Control
+# Boot Control HAL
 PRODUCT_PACKAGES += \
-    bootctrl.mt6789
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery \
+    bootctrl.mt6897 \
+    bootctrl.mt6897.recovery
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
