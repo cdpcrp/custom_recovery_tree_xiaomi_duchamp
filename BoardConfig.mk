@@ -132,6 +132,7 @@ TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEVICE_VERSION := crypton--
 
 # Workaround for copy out error
