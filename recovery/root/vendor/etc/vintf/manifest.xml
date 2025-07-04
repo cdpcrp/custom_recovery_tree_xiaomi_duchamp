@@ -45,6 +45,17 @@
         <transport arch="32+64">passthrough</transport>
         <fqname>@4.0::IMapper/default</fqname>
     </hal>
+
+    <hal format="hidl" optional="true">
+        <name>android.hardware.keymaster</name>
+        <version>3.0</version>
+        <version>4.0-1</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+
     <hal format="aidl">
         <name>android.hardware.nfc</name>
         <fqname>INfc/default</fqname>
