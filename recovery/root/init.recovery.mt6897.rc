@@ -13,13 +13,13 @@ on fs
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
     start boot-hal-1-2
 
-service vendor.keymint-mitee /vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee
+service vendor.keymint-mitee /system/bin/hw/android.hardware.security.keymint@3.0-service.mitee
     user root
     group root drmrpc
     disabled
     seclabel u:r:recovery:s0
 
-service vendor.gatekeeper_mitee /vendor/bin/hw/android.hardware.gatekeeper-service.mitee
+service vendor.gatekeeper_mitee /system/bin/hw/android.hardware.gatekeeper-service.mitee
     user root
     group root
     disabled
